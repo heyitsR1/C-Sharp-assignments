@@ -1,0 +1,14 @@
+/Users/aarohan/c#/assignments/week2/bin/Debug/net10.0/assignments
+/Users/aarohan/c#/assignments/week2/bin/Debug/net10.0/assignments.deps.json
+/Users/aarohan/c#/assignments/week2/bin/Debug/net10.0/assignments.runtimeconfig.json
+/Users/aarohan/c#/assignments/week2/bin/Debug/net10.0/assignments.dll
+/Users/aarohan/c#/assignments/week2/bin/Debug/net10.0/assignments.pdb
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.GeneratedMSBuildEditorConfig.editorconfig
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.AssemblyInfoInputs.cache
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.AssemblyInfo.cs
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.csproj.CoreCompileInputs.cache
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.dll
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/refint/assignments.dll
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.pdb
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/assignments.genruntimeconfig.cache
+/Users/aarohan/c#/assignments/week2/obj/Debug/net10.0/ref/assignments.dll
