@@ -20,6 +20,9 @@ public class Newspaper : LibraryItemBase
         Editor = editor;
     }
 
+    // Parameterless constructor for JSON deserialization
+    public Newspaper() : this("", "", "", 1000) { }
+
     public override void DisplayInfo()
     {
         Console.WriteLine($"  \u001b[33m[NEWSPAPER]\u001b[0m \u001b[37m'{Title}' - Edited by {Editor} ({PublicationYear})\u001b[0m");

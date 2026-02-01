@@ -25,6 +25,9 @@ public class Magazine : LibraryItemBase
         IssueNumber = issueNum;
     }
 
+    // Parameterless constructor for JSON deserialization
+    public Magazine() : this("", 1, "", 1000) { }
+
     public override void DisplayInfo()
     {
         Console.WriteLine($"  \u001b[35m[MAGAZINE]\u001b[0m \u001b[37m'{Title}' - Issue #{IssueNumber} ({PublicationYear})\u001b[0m");

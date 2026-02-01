@@ -1,8 +1,8 @@
 namespace LibrarySystemWeek4;
 
-/// <summary>
+
 /// Represents a book in the library with author-specific information.
-/// </summary>
+
 public class Book : LibraryItemBase
 {
     private string _author = "";
@@ -18,6 +18,9 @@ public class Book : LibraryItemBase
     {
         Author = author;
     }
+
+    // Parameterless constructor for JSON deserialization
+    public Book() : this("", "", "", 1000) { }
 
     public override void DisplayInfo()
     {

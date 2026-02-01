@@ -261,7 +261,7 @@ public class LibraryService
 
     /// <summary>
     /// Persists library data to JSON file with polymorphic type information.
-    /// TypeNameHandling.All enables deserialization of derived types (Book, Magazine, Newspaper).
+    /// Uses TypeNameHandling to preserve derived type information (Book, Magazine, Newspaper).
     /// </summary>
     public void SaveData()
     {
@@ -269,7 +269,7 @@ public class LibraryService
         {
             var settings = new JsonSerializerSettings
             {
-                TypeNameHandling = TypeNameHandling.All,
+                TypeNameHandling = TypeNameHandling.Objects,
                 Formatting = Formatting.Indented,
                 NullValueHandling = NullValueHandling.Ignore
             };
@@ -296,13 +296,14 @@ public class LibraryService
                 string json = File.ReadAllText(FileName);
                 var settings = new JsonSerializerSettings
                 {
-                    TypeNameHandling = TypeNameHandling.All
+                    TypeNameHandling = TypeNameHandling.Objects
                 };
 
-                var loadedItems = JsonConvert.DeserializeObject<List<ILibraryItem>>(json, settings);
-                if (loadedItems != null)
+                // Deserialize to object array first, then cast each item to ILibraryItem
+                var loadedItems = JsonConvert.DeserializeObject<List<object>>(json, settings);
+                if (loadedItems != null && loadedItems.Count > 0)
                 {
-                    items = loadedItems;
+                    items = loadedItems.Cast<ILibraryItem>().ToList();
                     Console.WriteLine($"\u001b[32m✓ Loaded {items.Count} item(s) from library file\u001b[0m\n");
                 }
             }

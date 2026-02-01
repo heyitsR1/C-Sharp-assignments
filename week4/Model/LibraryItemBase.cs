@@ -41,6 +41,9 @@ public abstract class LibraryItemBase : ILibraryItem
         PublicationYear = year;
     }
 
+    // Parameterless constructor for JSON deserialization
+    protected LibraryItemBase() : this("", "", 1000) { }
+
     // Each item type has its own way to display information in the UI
     public abstract void DisplayInfo();
 
