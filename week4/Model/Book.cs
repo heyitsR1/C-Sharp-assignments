@@ -1,8 +1,8 @@
 namespace LibrarySystemWeek4;
 
-
+/// <summary>
 /// Represents a book in the library with author-specific information.
-
+/// </summary>
 public class Book : LibraryItemBase
 {
     private string _author = "";

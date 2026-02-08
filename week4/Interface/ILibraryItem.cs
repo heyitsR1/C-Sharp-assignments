@@ -1,9 +1,9 @@
 namespace LibrarySystemWeek4;
 
+/// <summary>
 /// Defines the contract that all library items (books, magazines, newspapers) must follow.
 /// Enables polymorphic behavior and consistent item handling across the system.
-
-
+/// </summary>
 public interface ILibraryItem
 {
     string Title { get; set; }
